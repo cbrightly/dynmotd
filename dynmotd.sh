@@ -6,6 +6,10 @@ WHO=`whoami`
 GROUPZ=`groups`
 HOST=`hostname -A`
 ADDR=`/sbin/ifconfig eth0 | grep 'inet addr' | awk {'print $2'} | sed s/.*://`
+WIFI=`/sbin/ifconfig wlan0 | grep 'inet addr' | awk {'print $2'} | sed s/.*://`
+
+
+
 KERNEL=`uname -r`
 UP=`uptime | tr "," " " | cut -f4-8 -d" "`
 MEM=`cat /proc/meminfo | grep MemTotal | awk {'print $2'}`
@@ -24,6 +28,7 @@ cat /usr/local/etc/banner;
 echo '\033[0;35m+++++++++++++++++: \033[0;37mSystem Data\033[0;35m :+++++++++++++++++++
 \033[0;35m+    \033[0;37mHostname     \033[0;35m=      \033[1;32m'$HOST'
 \033[0;35m+    \033[0;37mAddress      \033[0;35m=      \033[1;32m'$ADDR'
+\033[0;35m+    \033[0;37mWireless     \033[0;35m=
 \033[0;35m+    \033[0;37mKernel       \033[0;35m=      \033[1;32m'$KERNEL'
 \033[0;35m+    \033[0;37mUptime       \033[0;35m=      \033[1;32m'$UP'
 \033[0;35m+    \033[0;37mMemory       \033[0;35m=      \033[1;32m'$MEM' MB

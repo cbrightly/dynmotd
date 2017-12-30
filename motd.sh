@@ -79,11 +79,12 @@ borderEmptyLine="$borderBar                                                     
 
 # Header
 art=$(cat ./banner)
-host=$(hostname )
+host=$(hostname)
 me=$(whoami)
 
 # Greetings
 greetings="$borderBar$(color $greetingsColor "$(center "Welcome back, $me!")")$borderBar\n"
+greetings="$greetings$borderBar$(color $greetingsColor "$(center "$(hostname)")")$borderBar\n"
 greetings="$greetings$borderBar$(color $greetingsColor "$(center "$(date +"%A, %d %B %Y, %T")")")$borderBar"
 
 # System information

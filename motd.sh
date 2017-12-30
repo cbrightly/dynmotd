@@ -79,7 +79,7 @@ borderEmptyLine="$borderBar                                                     
 
 # Header
 art=$(cat ./banner)
-
+host=$(hostname )
 me=$(whoami)
 
 # Greetings
@@ -124,5 +124,5 @@ stats="$label1\n$label2\n$label3\n$label4\n$label5"
 
 # Print motd
 echo -e “$art\n”
-echo -e "$header\n$borderEmptyLine\n$greetings\n$borderEmptyLine\n$stats\n$borderEmptyLine\n$borderBottomLine"
+echo -e "$borderTopLine$header\n$borderEmptyLine\n$greetings\n$borderEmptyLine\n$stats\n$borderEmptyLine\n$borderBottomLine"
 echo -e "\n\n"

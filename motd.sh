@@ -78,7 +78,6 @@ borderBar=$(color $borderColor "┃")
 borderEmptyLine="$borderBar                                                                              $borderBar"
 
 # Header
-art=$(cat ./banner)
 host=$(hostname)
 me=$(whoami)
 
@@ -118,7 +117,7 @@ label3="$borderBar  $(color $statsLabelColor "Memory........:") $label3$borderBa
 label4="$(extend "$(df -h ~ | awk 'NR==2 { printf "Total: %sB, Used: %sB, Free: %sB",$2,$3,$4; }')")"
 label4="$borderBar  $(color $statsLabelColor "Home space....:") $label4$borderBar"
 
-label5="$(extend "$(ip addr show eth0 | grep 'inet\b' | awk '{print $2}' | cut -d/ -f1)")"
+label5="$(extend "$(ip addr show wlan0 | grep 'inet\b' | awk '{print $2}' | cut -d/ -f1)")"
 label5="$borderBar  $(color $statsLabelColor "System IP.....:") $label5$borderBar"
 
 stats="$label1\n$label2\n$label3\n$label4\n$label5"

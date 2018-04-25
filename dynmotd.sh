@@ -15,7 +15,7 @@ SESSION=`who | grep $USER | wc -l  $ENDSESSION`
 ULIMIT=`ulimit`
 
 #echo $BANNER
-cat /usr/local/etc/banner;
+#cat /usr/local/etc/banner;
 
 echo '\033[0;35m++++++++++++++++++: \033[0;37mSystem Data\033[0;35m :++++++++++++++++++++
 \033[0;35m+    \033[0;37mHostname     \033[0;35m=      \033[1;32m'$HOST'
